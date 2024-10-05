@@ -14,9 +14,17 @@ The plugin gives you the following:
 
 ## Installation
 
-I'm working on getting this plugin published on the Obsidian Plugin Store, as soon as I can, as well as making it available through the [Obsidian BRAT plugin](https://github.com/TfTHacker/obsidian42-brat).
+I'm working on getting this plugin published on the Obsidian Plugin Store, as soon as I can.
 
-In the meantime you can install it manually:
+In the meantime you can install it in one of the following ways.
+
+### BRAT
+
+Use the [Obsidian BRAT plugin](https://github.com/TfTHacker/obsidian42-brat) and install it using the link to this repository:  
+https://github.com/SpeedaRJ/obsidian_folder_tabulation
+
+### Manually
+
 1. Download the latest release files from the [Releases](https://github.com/SpeedaRJ/obsidian_folder_tabulation/releases) page.
 2. Inside your Obsidian plugins folder (`%OBSIDIAN_HOME%/.obsidian/plugins/`) create the folder `obsidian_folder_tabulation`.
 3. Move the files to the created folder.
