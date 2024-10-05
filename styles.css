@@ -1,8 +1,15 @@
 /*
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+Folder Tabulation
 
-If your plugin does not need CSS, delete this file.
+- Simple style settings used for the UI buttons.
 
 */
+
+.folder-tabular-button.button-visible {
+	display: flex;
+}
+
+.folder-tabular-button.button-hidden {
+	display: none;
+}
