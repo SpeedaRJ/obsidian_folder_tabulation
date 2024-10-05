@@ -36,6 +36,8 @@ Alternatively, you can build the plugin yourself by downloading the source code 
 - You might need to restart Obsidian after installing the plugin for the buttons to appear.
 - The plugin doesn't play well with pinned tabs. Otherwise it should work fine.
 - Mobile support only tested through the developer preview.
+- Performance might be an issue on large vaults (don't quite know why).
+- If a window is in the background, the plugin will not move it to the front.
 
 ---
 
