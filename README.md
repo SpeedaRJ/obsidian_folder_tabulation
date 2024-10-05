@@ -7,7 +7,7 @@ A simple plugin designed to help you with navigating your Obsidian vault by enab
 The plugin gives you the following: 
 1. Enables two new commands that let you move to the next and previous files in a folder relative to the current file.
 2. If you reach the end of the folder, the files will loop.
-3. You can choose weather you want the new files to be opened in the same tab, new tab, new pane, or new window.
+3. You can choose weather you want the new files to be opened in the same tab, new tab, new pane, or new window (not supported on mobile).
 4. If a file is already open, it will be focused instead of opening a new one.
 5. The plugin add two buttons to the file bar above the editor, that enables you to cycle between the files (you can recolor them if you want).
 6. If you don't like the position of these buttons, you can disable them from the settings menu. I would recommend the [Obsidian Commander](https://github.com/phibr0/obsidian-commander) plugin to place these buttons wherever you want if you want to move them.
