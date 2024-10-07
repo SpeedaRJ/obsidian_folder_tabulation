@@ -60,7 +60,8 @@ export default class FolderTabulation extends FolderTabulationHelper {
 						"arrow-right-to-line",
 						"Tab to next file",
 						() => {
-							(this.app as any).commands.executeCommandById(
+							//@ts-ignore `commands`
+							this.app.commands.executeCommandById(
 								"folder-tabulation:move-to-next-file-in-folder"
 							);
 						}
@@ -68,13 +69,15 @@ export default class FolderTabulation extends FolderTabulationHelper {
 					buttonNext.addClasses([
 						"folder-tabular-button",
 						"button-visible",
+						"next"
 					]);
 
 					const buttonPrev = (leaf.view as FileView).addAction(
 						"arrow-left-to-line",
 						"Tab to previous file",
 						() => {
-							(this.app as any).commands.executeCommandById(
+							//@ts-ignore `commands`
+							this.app.commands.executeCommandById(
 								"folder-tabulation:move-to-prev-file-in-folder"
 							);
 						}
@@ -82,6 +85,7 @@ export default class FolderTabulation extends FolderTabulationHelper {
 					buttonPrev.addClasses([
 						"folder-tabular-button",
 						"button-visible",
+						"prev"
 					]);
 
 					this.openViews.set(leaf, {
@@ -91,7 +95,7 @@ export default class FolderTabulation extends FolderTabulationHelper {
 							["button-prev", buttonPrev],
 						]),
 					});
-					
+
 					const unloadedViews = [...this.openViews.keys()].filter(
 						(leaf) => leaf.getViewState().type === "empty"
 					);

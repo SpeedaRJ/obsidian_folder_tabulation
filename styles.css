@@ -6,6 +6,19 @@ Folder Tabulation
 
 */
 
+:root {
+	--next-button-color: #000000;
+	--prev-button-color: #000000;
+}
+
+.folder-tabular-button.next {
+	color: var(--next-button-color);
+}
+
+.folder-tabular-button.prev {
+	color: var(--prev-button-color);
+}
+
 .folder-tabular-button.button-visible {
 	display: flex;
 }
