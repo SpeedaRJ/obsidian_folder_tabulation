@@ -20,3 +20,15 @@ data.json
 
 # Exclude macOS Finder (System Explorer) View States
 .DS_Store
+
+# Exclude all of the build files
+HEAD
+config
+index
+description
+packed-refs
+logs/*
+hooks/*
+info/*
+refs/*
+objects/*

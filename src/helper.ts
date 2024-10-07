@@ -3,6 +3,7 @@ import {
 	normalizePath,
 	PaneType,
 	Plugin,
+	TAbstractFile,
 	TFile,
 	TFolder,
 	WorkspaceLeaf,
@@ -31,15 +32,22 @@ export default class FolderTabulationHelper extends Plugin {
 		const folder: TFolder | null =
 			this.app.vault.getFolderByPath(parentFolderPath);
 		if (folder) {
-			const files: TFile[] = folder.children.filter(
+			const files: TAbstractFile[] = folder.children.filter(
 				(file) => file instanceof TFile
-			) as TFile[];
+			);
+			if (!(files.every((file) => file instanceof TFile))) {
+				return;
+			}
 			if (files.length) {
-				const nextFile: TFile = this.getNextFile(
+				const nextFile: TAbstractFile | null = this.getNextFile(
 					files,
 					currentFileName,
 					next
 				);
+
+				if (nextFile === null) {
+					return;
+				}
 
 				const findSameView: WorkspaceLeaf = [
 					...openViews.keys(),
@@ -50,7 +58,7 @@ export default class FolderTabulationHelper extends Plugin {
 				if (findSameView) {
 					this.app.workspace.setActiveLeaf(findSameView);
 				} else {
-					this.openFile(nextFile, settings);
+					this.openFile(nextFile as TFile, settings);
 				}
 			}
 		}
@@ -75,7 +83,7 @@ export default class FolderTabulationHelper extends Plugin {
 		];
 	}
 
-	getNextFile(files: TFile[], currentFileName: string, next: boolean): TFile {
+	getNextFile(files: TAbstractFile[], currentFileName: string, next: boolean): TFile | null {
 		const currentDirFiles: Array<string> = files.map(
 			(file: TFile) => file.path
 		);
@@ -89,9 +97,10 @@ export default class FolderTabulationHelper extends Plugin {
 			nextIndex = currentDirFiles.length - 1;
 		}
 		const nextFilePath: string = normalizePath(currentDirFiles[nextIndex]);
-		const nextFile: TFile = this.app.vault.getAbstractFileByPath(
-			nextFilePath
-		) as TFile;
+		const nextFile: TAbstractFile | null = this.app.vault.getAbstractFileByPath(nextFilePath);
+		if (nextFile === null ||  !(nextFile instanceof TFile)) {
+			return null;
+		}
 		return nextFile;
 	}
 
