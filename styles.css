@@ -7,8 +7,8 @@ Folder Tabulation
 */
 
 :root {
-	--next-button-color: #000000;
-	--prev-button-color: #000000;
+	--next-button-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+	--prev-button-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
 }
 
 .folder-tabular-button.next {

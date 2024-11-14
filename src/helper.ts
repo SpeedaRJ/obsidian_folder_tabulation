@@ -167,15 +167,6 @@ export default class FolderTabulationHelper extends Plugin {
 		}
 	}
 
-	colorButtons(
-		nextButton: HTMLElement,
-		prevButton: HTMLElement,
-		settings: FolderTabulationSettings
-	): void {
-		nextButton.style.color = settings.nextFileColor;
-		prevButton.style.color = settings.prevFileColor;
-	}
-
 	setSettings(
 		settings: FolderTabulationSettings,
 		openViews: Map<WorkspaceLeaf, TabularFileConfiguration>
@@ -191,7 +182,6 @@ export default class FolderTabulationHelper extends Plugin {
 			const buttonNext = buttons.get("button-next");
 			const buttonPrev = buttons.get("button-prev");
 			if (buttonNext !== undefined && buttonPrev !== undefined) {
-				this.colorButtons(buttonNext, buttonPrev, settings);
 				this.setButtonDisplay(
 					currentFileName,
 					buttonNext,

@@ -9,7 +9,7 @@ The plugin gives you the following:
 2. If you reach the end of the folder, the files will loop.
 3. You can choose weather you want the new files to be opened in the same tab, new tab, new pane, or new window (not supported on mobile).
 4. If a file is already open, it will be focused instead of opening a new one.
-5. The plugin add two buttons to the file bar above the editor, that enables you to cycle between the files (you can recolor them if you want).
+5. The plugin add two buttons to the file bar above the editor, that enables you to cycle between the files.[^1]
 6. If you don't like the position of these buttons, you can disable them from the settings menu. I would recommend the [Obsidian Commander](https://github.com/phibr0/obsidian-commander) plugin to place these buttons wherever you want if you want to move them.
 
 ## Installation
@@ -35,9 +35,20 @@ Alternatively, you can build the plugin yourself by downloading the source code 
 
 - You might need to restart Obsidian after installing the plugin for the buttons to appear.
 - The plugin doesn't play well with pinned tabs. Otherwise it should work fine.
-- Mobile support only tested through the developer preview.
 - Performance might be an issue on large vaults (don't quite know why).
 - If a window is in the background, the plugin will not move it to the front.
+
+# Demo
+
+Below is a demonstration of the plugin in action. I bound my hotkeys for the added functionalities to the following key-bindings:
+- `Ctrl + Shift + ]` - Move to the next file
+- `Ctrl + Shift + [` - Move to the previous file
+
+![Demo](./assets/folder_tabulation_demo.gif)
+
+---
+
+[^1]: To change their color use CSS snippets, the default color is your Obsidian accents color.
 
 ---
 

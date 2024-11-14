@@ -10,8 +10,6 @@ import FolderTabulationSettingsTab from "./src/settings";
 const DEFAULT_SETTINGS: FolderTabulationSettings = {
 	newTab: "same",
 	hideButtons: false,
-	nextFileColor: "#b3b3b3",
-	prevFileColor: "#b3b3b3",
 };
 
 export default class FolderTabulation extends FolderTabulationHelper {
@@ -112,11 +110,6 @@ export default class FolderTabulation extends FolderTabulationHelper {
 					if (buttonNext !== undefined && buttonPrev !== undefined) {
 						this.setButtonDisplay(
 							currentFileName,
-							buttonNext,
-							buttonPrev,
-							this.settings
-						);
-						this.colorButtons(
 							buttonNext,
 							buttonPrev,
 							this.settings

@@ -49,27 +49,5 @@ export default class FolderTabulationSettingsTab extends PluginSettingTab {
 						this.plugin.saveSettings();
 					});
 			});
-
-		new Setting(containerEl)
-			.setName("Pick the color for the next file button")
-			.addColorPicker((colorPicker) => {
-				colorPicker
-					.setValue(this.plugin.settings.nextFileColor)
-					.onChange((value) => {
-						this.plugin.settings.nextFileColor = value;
-						this.plugin.saveSettings();
-					});
-			});
-
-		new Setting(containerEl)
-			.setName("Pick the color for the previous file button")
-			.addColorPicker((colorPicker) => {
-				colorPicker
-					.setValue(this.plugin.settings.prevFileColor)
-					.onChange((value) => {
-						this.plugin.settings.prevFileColor = value;
-						this.plugin.saveSettings();
-					});
-			});
 	}
 }
