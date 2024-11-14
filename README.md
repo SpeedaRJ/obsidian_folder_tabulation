@@ -40,11 +40,11 @@ Alternatively, you can build the plugin yourself by downloading the source code 
 
 # Demo
 
-Below is a demonstration of the plugin in action. I bound my hotkeys for the added functionalities to the following key-bindings:
+Below is a demonstration of the plugin in action. I bound my hotkeys to the following key-bindings:
 - `Ctrl + Shift + ]` - Move to the next file
 - `Ctrl + Shift + [` - Move to the previous file
 
-![Demo](./assets/folder_tabulation_demo.gif)
+![Demo](./assets/demo_folder_tabulation.gif)
 
 ---
 
