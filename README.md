@@ -46,8 +46,6 @@ Below is a demonstration of the plugin in action. I bound my hotkeys to the foll
 
 ![Demo](./assets/demo_folder_tabulation.gif)
 
----
-
 [^1]: To change their color use CSS snippets, the default color is your Obsidian accents color.
 
 ---
