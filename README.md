@@ -1,6 +1,6 @@
-# Obsidian File Tabulation Plugin
+# File Tabulation Plugin
 
-A simple plugin designed to help you with navigating your Obsidian vault by enabling you to move through files in a single folder like they are tabs in a web browser.
+A simple plugin for Obsidian designed to help you with navigating your vault by enabling you to move through files in a single folder like they are tabs in a web browser.
 
 ## Features
 
@@ -21,7 +21,7 @@ In the meantime you can install it in one of the following ways.
 ### BRAT
 
 Use the [Obsidian BRAT plugin](https://github.com/TfTHacker/obsidian42-brat) and install it using the link to this repository:  
-https://github.com/SpeedaRJ/obsidian_folder_tabulation
+`https://github.com/SpeedaRJ/obsidian_folder_tabulation`
 
 ### Manually
 
